@@ -12,8 +12,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          fontFamily: 'Raleway',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                  titleLarge: const TextStyle(
+                fontSize: 18,
+                fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
+              ))),
       title: 'Material App',
-      home: PageOnboarding(),
+      home: HomeCategories(),
       routes: {
         'home_categories': (context) {
           return HomeCategories();

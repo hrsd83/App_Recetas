@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/colors.dart';
+
 class PageOnboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class PageOnboarding extends StatelessWidget {
   /// WIDGETS COMPONENTS
   Widget body({required BuildContext context}) {
     return Container(
-      color: Colors.white,
+      color: pColor,
       child: SafeArea(
         // SafeArea : Un widget que inserta a su hijo con suficiente relleno para evitar intrusiones por parte del sistema operativo.
         child: PageView(
@@ -21,17 +23,17 @@ class PageOnboarding extends StatelessWidget {
           children: <Widget>[
             viewComponent(
                 context: context,
-                assetImage: AssetImage('assets/chef.png'),
+                assetImage: const AssetImage('assets/chef.png'),
                 title: "Welcome",
                 description: ""),
             viewComponent(
                 context: context,
-                assetImage: AssetImage('assets/comida.png'),
+                assetImage: const AssetImage('assets/comida.png'),
                 title: "Mensaje instantaneos",
                 description: "Envia mensajes en tiempo real con tus contactos"),
             viewComponent(
                 context: context,
-                assetImage: AssetImage('assets/libro_Recetas.png'),
+                assetImage: const AssetImage('assets/libro_Recetas.png'),
                 title: "Comparte tus videos",
                 description:
                     "Mira videos que comparten tus amigos y crea tus propio arte en video"),
@@ -54,12 +56,12 @@ class PageOnboarding extends StatelessWidget {
     Color? color = Theme.of(context).textTheme.headline1!.color;
 
     return Padding(
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         children: <Widget>[
           Expanded(child: Container()),
           Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: iconData == null
                   ? Image(
                       image: assetImage,
@@ -68,7 +70,7 @@ class PageOnboarding extends StatelessWidget {
                       fit: BoxFit.cover)
                   : Icon(iconData)),
           Text(title, style: estiloTitulo, textAlign: TextAlign.center),
-          SizedBox(height: 12.0),
+          const SizedBox(height: 12.0),
           Text(description,
               style: estiloSubTitulo, textAlign: TextAlign.center),
           Expanded(child: Container()),
@@ -83,11 +85,18 @@ class PageOnboarding extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       child: Center(
-        child: ElevatedButton(
-          child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-              child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0))),
-          onPressed: () => Navigator.pushNamed(context, 'home_categories'),
+        child: Container(
+          child: ElevatedButton(
+            child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Text(
+                  'Bienvenidos',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                )),
+            onPressed: () => Navigator.pushNamed(context, 'home_categories'),
+          ),
         ),
       ),
     );

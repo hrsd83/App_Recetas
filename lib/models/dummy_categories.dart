@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'category.dart';
 
-// ignore: constant_identifier_names
 List<Category> dummyCategories = [
   Category(
     id: 'c1',
