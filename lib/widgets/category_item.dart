@@ -2,8 +2,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import 'package:app_recetas/models/category_meals_screen.dart';
 import 'package:app_recetas/utils/colors.dart';
+
+import '../screens/category_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;

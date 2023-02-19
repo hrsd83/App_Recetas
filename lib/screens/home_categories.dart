@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import '../widgets/category_item.dart';
 import '../utils/colors.dart';
-import './dummy_categories.dart';
-import 'category_item.dart';
+import '../models/dummy_data.dart';
 
 class HomeCategories extends StatelessWidget {
   static String routeHomeCategories = '/homeCategories';
@@ -19,7 +19,7 @@ class HomeCategories extends StatelessWidget {
         color: gColor,
         child: GridView(
           padding: EdgeInsets.all(15),
-          children: dummyCategories
+          children: DUMMY_CATEGORIES
               .map((catData) => CategoryItem(
                     title: catData.title,
                     color: catData.color,

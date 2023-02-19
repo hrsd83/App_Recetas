@@ -1,7 +1,7 @@
-import 'package:app_recetas/models/category_meals_screen.dart';
+import 'package:app_recetas/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'models/home_categories.dart';
+import 'screens/home_categories.dart';
 import 'widgets/page_onboarding.dart';
 
 void main() => runApp(const MyApp());

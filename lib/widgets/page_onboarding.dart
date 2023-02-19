@@ -1,4 +1,4 @@
-import 'package:app_recetas/models/home_categories.dart';
+import 'package:app_recetas/screens/home_categories.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
