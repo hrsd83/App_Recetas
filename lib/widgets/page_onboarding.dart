@@ -1,3 +1,4 @@
+import 'package:app_recetas/models/home_categories.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
@@ -95,7 +96,7 @@ class PageOnboarding extends StatelessWidget {
                     fontSize: 20.0,
                   ),
                 )),
-            onPressed: () => Navigator.pushNamed(context, 'home_categories'),
+            onPressed: () => Navigator.of(context).pushNamed(HomeCategories.routeHomeCategories),
           ),
         ),
       ),

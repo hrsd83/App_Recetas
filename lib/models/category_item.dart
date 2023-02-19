@@ -1,14 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:animate_do/animate_do.dart';
-import 'package:app_recetas/models/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'package:app_recetas/models/category_meals_screen.dart';
 import 'package:app_recetas/utils/colors.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
   const CategoryItem({
     Key? key,
+    required this.id,
     required this.title,
     required this.color,
   }) : super(key: key);
@@ -16,9 +19,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void selectCategory(BuildContext ctx) {
-      Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-        return CategoryMealsScreen();
-      }));
+      Navigator.of(context).pushNamed(CategoryMealsScreen.routeName, arguments:{'id': id, 'title': title});
     }
 
     return FadeInDown(

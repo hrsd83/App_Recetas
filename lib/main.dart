@@ -1,3 +1,4 @@
+import 'package:app_recetas/models/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'models/home_categories.dart';
@@ -21,11 +22,16 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ))),
       title: 'Material App',
-      home: HomeCategories(),
+      // home: HomeCategories(),
       routes: {
-        'home_categories': (context) {
-          return HomeCategories();
-        },
+        '/' : (ctx) => PageOnboarding(),
+        HomeCategories.routeHomeCategories : (ctx) =>  const HomeCategories(),
+
+        CategoryMealsScreen.routeName : (ctx) => CategoryMealsScreen()
+        // 'home_categories': (context) {
+        //   return HomeCategories();
+          
+        // },
       },
     );
   }

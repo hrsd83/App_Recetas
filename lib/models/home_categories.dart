@@ -4,6 +4,7 @@ import './dummy_categories.dart';
 import 'category_item.dart';
 
 class HomeCategories extends StatelessWidget {
+  static String routeHomeCategories = '/homeCategories';
   const HomeCategories({super.key});
 
   @override
@@ -19,8 +20,11 @@ class HomeCategories extends StatelessWidget {
         child: GridView(
           padding: EdgeInsets.all(15),
           children: dummyCategories
-              .map((catData) =>
-                  CategoryItem(title: catData.title, color: catData.color))
+              .map((catData) => CategoryItem(
+                    title: catData.title,
+                    color: catData.color,
+                    id: catData.id,
+                  ))
               .toList(),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
