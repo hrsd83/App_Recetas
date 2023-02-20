@@ -11,14 +11,16 @@ class HomeCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: pColor,
-        title: const Text('Comida Gourmet'),
-      ),
       body: Container(
         color: gColor,
         child: GridView(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200,
+            childAspectRatio: 3 / 2.5,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
+          ),
           children: DUMMY_CATEGORIES
               .map((catData) => CategoryItem(
                     title: catData.title,
@@ -26,12 +28,6 @@ class HomeCategories extends StatelessWidget {
                     id: catData.id,
                   ))
               .toList(),
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-            childAspectRatio: 3 / 2.5,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20,
-          ),
         ),
       ),
     );

@@ -1,6 +1,5 @@
-import 'package:app_recetas/screens/home_categories.dart';
 import 'package:flutter/material.dart';
-
+import '../screens/taps_screen.dart';
 import '../utils/colors.dart';
 
 class PageOnboarding extends StatelessWidget {
@@ -99,7 +98,7 @@ class PageOnboarding extends StatelessWidget {
                   ),
                 )),
             onPressed: () => Navigator.of(context)
-                .pushNamed(HomeCategories.routeHomeCategories),
+                .pushNamed(TapsScreen.routeName),
           ),
         ),
       ),
