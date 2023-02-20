@@ -24,20 +24,21 @@ class PageOnboarding extends StatelessWidget {
           children: <Widget>[
             viewComponent(
                 context: context,
-                assetImage: const AssetImage('assets/chef.png'),
-                title: "Welcome",
+                assetImage: const AssetImage('assets/chef2.jpg'),
+                title: "Bienvenido...",
                 description: ""),
             viewComponent(
                 context: context,
                 assetImage: const AssetImage('assets/comida.png'),
-                title: "Mensaje instantaneos",
-                description: "Envia mensajes en tiempo real con tus contactos"),
+                title: "Recetas de Comidas Gourmet ",
+                description:
+                    "Recetario donde encontraras varios tipos de comida"),
             viewComponent(
                 context: context,
                 assetImage: const AssetImage('assets/libro_Recetas.png'),
-                title: "Comparte tus videos",
+                title: "Ven y comparte nuestra cocina ",
                 description:
-                    "Mira videos que comparten tus amigos y crea tus propio arte en video"),
+                    "Realiza cada plato de comida y veras lo rico que son nuestras recetas.."),
             paginaButton(context),
           ],
         ),
@@ -52,9 +53,10 @@ class PageOnboarding extends StatelessWidget {
       String title = "",
       String description = ""}) {
     // Declaramos los estilos
-    const estiloTitulo = TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold);
-    const estiloSubTitulo = TextStyle(fontSize: 20.0);
-    Color? color = Theme.of(context).textTheme.headline1!.color;
+    const estiloTitulo = TextStyle(
+        fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white);
+    const estiloSubTitulo = TextStyle(fontSize: 20.0, color: Colors.white);
+    Color? color = Colors.white;
 
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -93,10 +95,11 @@ class PageOnboarding extends StatelessWidget {
                 child: Text(
                   'Bienvenidos',
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 20,
                   ),
                 )),
-            onPressed: () => Navigator.of(context).pushNamed(HomeCategories.routeHomeCategories),
+            onPressed: () => Navigator.of(context)
+                .pushNamed(HomeCategories.routeHomeCategories),
           ),
         ),
       ),

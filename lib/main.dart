@@ -1,4 +1,5 @@
 import 'package:app_recetas/screens/category_meals_screen.dart';
+import 'package:app_recetas/screens/meal_detals_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home_categories.dart';
@@ -27,11 +28,9 @@ class MyApp extends StatelessWidget {
         '/' : (ctx) => PageOnboarding(),
         HomeCategories.routeHomeCategories : (ctx) =>  const HomeCategories(),
 
-        CategoryMealsScreen.routeName : (ctx) => CategoryMealsScreen()
-        // 'home_categories': (context) {
-        //   return HomeCategories();
-          
-        // },
+        CategoryMealsScreen.routeName : (ctx) => CategoryMealsScreen(),
+
+     MealDetalsScreen.routeName : (ctx) => MealDetalsScreen(),
       },
     );
   }

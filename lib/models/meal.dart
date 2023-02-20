@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart ' ;
+import 'package:flutter/foundation.dart ';
 import 'package:flutter/material.dart';
 
 //Se enumera la complejidad de la receta
@@ -16,8 +16,8 @@ class Meal {
   final List<String> categories;
   final String title;
   final String imageUrl;
-  final List<String> ingredients;
-  final List <String> steps;
+  final List<dynamic> ingredients;
+  final List<String> steps;
   final int duration;
   final Complexity complexity;
   final Affordability affodability;
@@ -26,9 +26,21 @@ class Meal {
   final bool isVegan;
   final bool isVegetarian;
 
-
-
-  Meal({required this.id, required this.categories, required this.title, required this.imageUrl, required this.ingredients, required this.steps, required this.duration, required this.complexity, required this.affodability, required this.isflutterFree, required this.isLactoseFree, required this.isVegan, required this.isVegetarian, required Affordability affordability, required bool isGlutenFree,}  
-  
-  );
+  Meal({
+    required this.id,
+    required this.categories,
+    required this.title,
+    required this.imageUrl,
+    required this.ingredients,
+    required this.steps,
+    required this.duration,
+    required this.complexity,
+    required this.affodability,
+    required this.isflutterFree,
+    required this.isLactoseFree,
+    required this.isVegan,
+    required this.isVegetarian,
+    required Affordability affordability,
+    required bool isGlutenFree,
+  });
 }
