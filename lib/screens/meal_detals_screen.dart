@@ -87,7 +87,6 @@ class MealDetalsScreen extends StatelessWidget {
                           Divider(
                             height: 5,
                             color: Colors.grey,
-                            
                           )
                         ],
                       ),
@@ -96,6 +95,14 @@ class MealDetalsScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(
+            Icons.delete,
+            color: pColor,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop(mealId);
+          }),
     );
   }
 }

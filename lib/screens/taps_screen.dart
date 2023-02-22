@@ -14,11 +14,11 @@ class TapsScreen extends StatefulWidget {
 }
 
 class _TapsScreenState extends State<TapsScreen> {
-  final List<Map<String, dynamic>> _pages = [
-    {'page': const HomeCategories(), 'title': 'categories'},
+  final List<Map<String, Object>> _pages = [
+    {'page': const HomeCategories(), 'title': 'Categorias'},
     {
       'page': const FavoriteScreen(),
-      'title': 'Tus Favoritos',
+      'title': 'Favoritos',
     }
   ];
   int _selectedPageIndex = 0;
@@ -34,7 +34,7 @@ class _TapsScreenState extends State<TapsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: pColor,
-        title: Text(_pages[_selectedPageIndex]['title']),
+        title: Text(_pages[_selectedPageIndex]['title'] as String),
       ),
       drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'] as Widget,
@@ -51,7 +51,7 @@ class _TapsScreenState extends State<TapsScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.category_outlined, color: Colors.black),
-            label: 'Categoria',
+            label: 'Categorias',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star_border_outlined, color: Colors.black),

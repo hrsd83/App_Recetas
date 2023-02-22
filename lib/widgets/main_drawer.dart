@@ -1,5 +1,6 @@
-import 'dart:ffi';
-
+import 'package:app_recetas/screens/category_meals_screen.dart';
+import 'package:app_recetas/screens/filters_screen.dart';
+import 'package:app_recetas/screens/taps_screen.dart';
 import 'package:app_recetas/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -25,15 +26,28 @@ class MainDrawer extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          buildListTile('Comida', Icons.restaurant),
-          buildListTile('Configuración', Icons.settings),
+          buildListTile('Comida', Icons.restaurant, () {
+            // Navigator.of(context).pushNamed(CategoryMealsScreen.routeName);
+            Navigator.of(context).pushReplacementNamed(TapsScreen.routeName);
+          }),
+          Divider(
+            color: pColor,
+            height: 10,
+          ),
+          buildListTile('Configuración', Icons.settings, () {
+            Navigator.of(context).pushReplacementNamed(FilterScreen.routeName);
+          }),
+          Divider(
+            color: pColor,
+            height: 10,
+          )
         ],
       ),
     );
   }
 
 //Metodo del menu Drawer
-  ListTile buildListTile(String title, IconData icon) {
+  ListTile buildListTile(String title, IconData icon, tapHandler) {
     return ListTile(
       iconColor: pColor,
       textColor: pColor,
@@ -46,7 +60,7 @@ class MainDrawer extends StatelessWidget {
         style: TextStyle(
             fontFamily: 'Roboto', fontSize: 25, fontWeight: FontWeight.bold),
       ),
-      onTap: () {},
+      onTap: tapHandler,
     );
   }
 }

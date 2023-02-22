@@ -56,7 +56,7 @@ List DUMMY_CATEGORIES = [
   ),
 ];
 
-final DUMMY_MEALS = <dynamic>[
+final  DUMMY_MEALS = <dynamic>[
   Meal(
     id: 'm1',
     categories: [

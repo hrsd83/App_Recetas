@@ -14,10 +14,10 @@ enum Affordability { Affodable, Pricey, Luxurious }
 class Meal {
   final String id;
   final List<String> categories;
-  final String title;
+  final String  title;
   final String imageUrl;
-  final List<dynamic> ingredients;
-  final List<dynamic> steps;
+  final List<String> ingredients;
+  final List<String> steps;
   final int duration;
   final Complexity complexity;
   final Affordability affodability;
