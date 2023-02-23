@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/category_item.dart';
-import '../models/dummy_data.dart';
-
+import 'package:app_recetas/screens/screen.dart';
 class HomeCategories extends StatelessWidget {
   static String routeHomeCategories = '/homeCategories';
   const HomeCategories({super.key});

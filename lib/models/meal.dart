@@ -1,6 +1,3 @@
-import 'package:flutter/foundation.dart ';
-import 'package:flutter/material.dart';
-
 //Se enumera la complejidad de la receta
 enum Complexity {
   //Simple, Desafiante, Duro
@@ -9,12 +6,13 @@ enum Complexity {
   Hard,
 }
 
+// ignore: constant_identifier_names
 enum Affordability { Affodable, Pricey, Luxurious }
 
 class Meal {
   final String id;
   final List<String> categories;
-  final String  title;
+  final String title;
   final String imageUrl;
   final List<String> ingredients;
   final List<String> steps;

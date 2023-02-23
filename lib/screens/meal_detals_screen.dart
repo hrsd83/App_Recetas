@@ -1,17 +1,18 @@
-import 'package:app_recetas/models/dummy_data.dart';
-import 'package:app_recetas/utils/colors.dart';
+import 'package:app_recetas/screens/screen.dart';
 import 'package:flutter/material.dart';
 
 class MealDetalsScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
+  const MealDetalsScreen({Key? key}) : super(key: key);
+
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Text(
         text,
         style:
-            TextStyle(color: pColor, fontSize: 25, fontWeight: FontWeight.bold),
+            const TextStyle(color: pColor, fontSize: 25, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -22,8 +23,8 @@ class MealDetalsScreen extends StatelessWidget {
           color: pCColor,
           border: Border.all(color: pColor),
           borderRadius: BorderRadius.circular(10)),
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       height: 200,
       width: 300,
       child: child,
@@ -79,12 +80,12 @@ class MealDetalsScreen extends StatelessWidget {
                               backgroundColor: Colors.white,
                               child: Text(
                                 '# ${(index + 1)}',
-                                style: TextStyle(color: pColor),
+                                style: const TextStyle(color: pColor),
                               ),
                             ),
                             title: Text(selectedMeal.steps[index]),
                           ),
-                          Divider(
+                          const Divider(
                             height: 5,
                             color: Colors.grey,
                           )
@@ -96,7 +97,7 @@ class MealDetalsScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(
+          child: const Icon(
             Icons.delete,
             color: pColor,
           ),

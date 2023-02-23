@@ -1,20 +1,17 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:app_recetas/models/category.dart';
-import 'package:app_recetas/models/dummy_data.dart';
-import 'package:app_recetas/models/meal.dart';
-import 'package:app_recetas/utils/colors.dart';
-import 'package:app_recetas/widgets/meal_item.dart';
+import 'package:app_recetas/screens/screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoryMealsScreen extends StatefulWidget {
   static const String routeName = '/categoryMeals';
+
+  const CategoryMealsScreen({Key? key}) : super(key: key);
 
   @override
   State<CategoryMealsScreen> createState() => _CategoryMealsScreenState();
 }
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
-  late String categoryTitle;
+  late List<String> categoryTitle;
   late List<dynamic> displayedMeals;
   var _loadedInitData = false;
   @override
@@ -26,16 +23,17 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   void didChangeDependencies() {
     if (!_loadedInitData) {
       final routeArgs =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
-    final categoryTitle = routeArgs['title'];
-    final categoryId = routeArgs['id'];
+          ModalRoute.of(context)?.settings.arguments as Map<String, Object>;
+          //TODO falta arreglar el titulo
+      // final categoryTitle = routeArgs['title']; 
+      final categoryId = routeArgs['id'];
 
-    displayedMeals = DUMMY_MEALS.where((meal) {
-      return meal.categories.contains(categoryId);
-    }).toList();
-    _loadedInitData = true;
+      displayedMeals = DUMMY_MEALS.where((meal) {
+        return meal.categories.contains(categoryId);
+      }).toList();
+      _loadedInitData = true;
     }
-    
+
     super.didChangeDependencies();
   }
 
@@ -50,6 +48,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: pColor,
+          //TODO falta arreglar el titulo
           // title: Text(categoryTitle),
         ),
         body: ListView.builder(

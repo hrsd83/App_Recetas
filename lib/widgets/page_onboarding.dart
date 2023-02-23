@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../screens/taps_screen.dart';
-import '../utils/colors.dart';
+import 'package:app_recetas/screens/screen.dart';
 
 class PageOnboarding extends StatelessWidget {
+  const PageOnboarding({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

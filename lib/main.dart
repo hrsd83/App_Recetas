@@ -1,15 +1,17 @@
-import 'package:app_recetas/screens/category_meals_screen.dart';
-import 'package:app_recetas/screens/filters_screen.dart';
-import 'package:app_recetas/screens/meal_detals_screen.dart';
-import './screens/taps_screen.dart';
 import 'package:flutter/material.dart';
-import 'widgets/page_onboarding.dart';
+import 'package:app_recetas/screens/screen.dart';
+
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,10 +26,10 @@ class MyApp extends StatelessWidget {
               ))),
       title: 'Material App',
       routes: {
-        '/': (ctx) => PageOnboarding(),
+        '/': (ctx) => const PageOnboarding(),
         TapsScreen.routeName: (ctx) => const TapsScreen(),
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetalsScreen.routeName: (ctx) => MealDetalsScreen(),
+        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        MealDetalsScreen.routeName: (ctx) => const MealDetalsScreen(),
         FilterScreen.routeName: (ctx) => const FilterScreen(),
       },
     );

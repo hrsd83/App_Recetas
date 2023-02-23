@@ -1,8 +1,7 @@
-import 'package:app_recetas/screens/favorite_screen.dart';
-import 'package:app_recetas/screens/home_categories.dart';
-import 'package:app_recetas/utils/colors.dart';
-import 'package:app_recetas/widgets/main_drawer.dart';
+import 'package:app_recetas/screens/screen.dart';
 import 'package:flutter/material.dart';
+
+
 
 class TapsScreen extends StatefulWidget {
   static String routeName = '/tapsScreen';
@@ -36,16 +35,16 @@ class _TapsScreenState extends State<TapsScreen> {
         backgroundColor: pColor,
         title: Text(_pages[_selectedPageIndex]['title'] as String),
       ),
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         backgroundColor: pColor,
         unselectedItemColor: pColor,
         selectedItemColor: pColor,
-        unselectedLabelStyle: TextStyle(fontSize: 16),
+        unselectedLabelStyle: const TextStyle(fontSize: 16),
         iconSize: 30,
-        selectedLabelStyle: TextStyle(fontSize: 14),
+        selectedLabelStyle: const TextStyle(fontSize: 14),
         currentIndex: _selectedPageIndex,
         type: BottomNavigationBarType.shifting,
         items: const [

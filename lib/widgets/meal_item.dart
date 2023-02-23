@@ -1,10 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import 'package:app_recetas/models/meal.dart';
-import 'package:app_recetas/utils/colors.dart';
-
-import '../screens/meal_detals_screen.dart';
+import 'package:app_recetas/screens/screen.dart';
 //Propiedades parta mostrar la comida
 
 class MealItem extends StatelessWidget {
@@ -124,22 +121,22 @@ class MealItem extends StatelessWidget {
                       children: <Widget>[
                         const Icon(Icons.schedule_outlined,
                             color: Colors.white),
-                        SizedBox(
+                        const SizedBox(
                           width: 6,
                         ),
                         Text(
                           '$duration min',
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(
+                        const Icon(
                           Icons.work_history,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 6,
                         ),
                         Text(complexityText,
@@ -148,16 +145,16 @@ class MealItem extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(
+                        const Icon(
                           Icons.attach_money,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 6,
                         ),
                         Text(
                           AffordabilityText,
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ],
                     )

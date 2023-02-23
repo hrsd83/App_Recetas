@@ -1,6 +1,6 @@
-import 'package:app_recetas/utils/colors.dart';
-import 'package:app_recetas/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:app_recetas/screens/screen.dart';
+
 
 class FilterScreen extends StatefulWidget {
   static const routeName = '/filter';
@@ -22,12 +22,12 @@ class _FilterScreenState extends State<FilterScreen> {
         appBar: AppBar(
           backgroundColor: pColor,
         ),
-        drawer: MainDrawer(),
+        drawer: const MainDrawer(),
         body: Column(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(20),
-              child: Text(
+              padding: const EdgeInsets.all(20),
+              child:  Text(
                 textAlign: TextAlign.center,
                 'Ajustar su selección de comida',
                 style: TextStyle(
